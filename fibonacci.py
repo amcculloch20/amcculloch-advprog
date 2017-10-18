@@ -1,9 +1,8 @@
+
 def fib(n):
-    x,y = 0,1
-    while 1:
-        x =  x + y
-        y = x + y
-    for i in range(1, n+1):
+    x, y = 0, 1
+    for i in (2,n): x, y= y, x + y
+    print y
 
 
 fib(8)
