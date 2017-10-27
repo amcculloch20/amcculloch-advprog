@@ -1,6 +1,6 @@
 import turtle
 
-window =  turtle.Screen()
+window = turtle.Screen()
 
 nick = turtle.Turtle()
 anu = turtle.Turtle()
