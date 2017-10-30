@@ -26,6 +26,15 @@ nick.setposition(0,0)
 nick.left(140)
 nick.pendown()
 
+#S
+nick.circle(75,180)
+nick.circle(-75,180)
+
+nick.penup()
+nick.setposition(0,0)
+nick.pendown()
+nick.right(190)
+
 #M
 nick.forward(300)
 nick.penup()
