@@ -1,4 +1,4 @@
-
+directory = []
 class Student:
     count = 0
     apple = 0
@@ -40,15 +40,8 @@ while 1:
         age = raw_input("What is the students age?")
         favsub = raw_input("What is the students fav subject?")
         tech = raw_input("Apple or samsung?")
+        directory.append(Student(name, favsub, age, height))
 
-        dage = {}
-        dage[name] = age
-
-        dheight = {}
-        dheight[name] = height
-
-        dfavsub = {}
-        dfavsub[name] = favsub
     else:
         break
 
@@ -60,6 +53,4 @@ student1.which()
 
 
 
-print "their ages are", dage
-print "their heights are", dheight
-print "their favorite subject is", dfavsub
+print directory
