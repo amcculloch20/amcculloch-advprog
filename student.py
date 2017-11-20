@@ -4,21 +4,19 @@ class Student:
     apple = 0
     samsung = 0
 
-    def  __init__(self,name,favsub,age,height):
+    def  __init__(self,name,favsub,age,height,sid):
         self.name = name
         self.favsub = favsub
         self.age = age
         self.height = height
+        Student.count += 1
+        self.sid = Student.count
 
-    def disstu(self):
+    """def disstu(self):
         print "Student's name is", self.name
         print "Student's favorite subject is", self.favsub
         print "Student's age is ", self.age
-        print "Student's height is", self.height
-
-    def stunum(self):
-        Student.count += 1
-        print "Student's ID number is", Student.count
+        print "Student's height is", self.height"""
 
 
     def which(self):
@@ -30,30 +28,31 @@ class Student:
 
 end = 1
 while end == 1:
-    x =raw_input("do you want to add a person to the directory? (y? or n?)")
+    x =raw_input("Do you want to add a person to the directory? (y? or n?)")
     if x == "y":
         name = raw_input("What is the student's name? ")
         height = raw_input("What is the student's height? ")
         age = raw_input("What is the student's age? ")
         favsub = raw_input("What is the student's favorite subject? ")
         tech = raw_input("Apple or samsung? ")
-        directory.append(Student(name, favsub, age, height))
-        student1 = Student(name, favsub, age, height)
-        student1.stunum()
+        sid = 0
+        directory.append(Student(name, favsub, age, height,sid))
+        student1 = Student(name, favsub, age, height,sid)
         student1.which()
         print "_______________"
     else:
         n = raw_input("Do you want to see a list of students and their information? (y? or n?)")
         if n == "y":
-            print "People in the directory:"
+            print "People in the directory (please ignore the 'none's):"
             for person in directory:
+                print "_________________"
                 print "Name:", person.name
                 print "Height:", person.height
                 print "Age:", person.age
                 print "Favorite subject:", person.favsub
                 print "Apple or Samsung:", person.which()
-                print person.stunum()
-                print "_________________"
+                print "Student ID:", person.sid
+
         else:
             z = raw_input("Do you want to leave the program? (y? or n?)")
             if z == "y":
